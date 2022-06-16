@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-public class EchoForm {
+public class EchoModel {
 	private String val;
 
 	public void setVal(String val) {
