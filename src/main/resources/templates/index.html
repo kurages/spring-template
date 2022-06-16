@@ -6,7 +6,7 @@
 
 <body>
 	<p>Gradle Spring Boot Hello World</p>
-	<from th:actions="@{/echo}" th:field="${form}">
+	<from th:actions="@{/echo}" method="post" th:field="${form}">
 		<input type="text" id="val" />
 		<input type="submit" value="送信" />
 	</form>
