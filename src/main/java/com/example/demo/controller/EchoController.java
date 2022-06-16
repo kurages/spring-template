@@ -12,6 +12,7 @@ import com.example.demo.model.EchoModel;
 @Controller
 @RequestMapping("/echo")
 public class EchoController {
+	
 	@ModelAttribute
 	public EchoModel createEchoModel() {
 		EchoModel form = new EchoModel();
@@ -24,7 +25,7 @@ public class EchoController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String echo(@Validated EchoModel form, Model model) {
+	public String echo(EchoModel form, Model model) {
 		model.addAttribute("val", form.getVal());
 		return "echo";
 	}
