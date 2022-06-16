@@ -23,7 +23,7 @@ public class EchoController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String echo(@ModelAttribute("form") EchoModel form, Model model) {
+	public String echo(@Validated EchoModel form, Model model) {
 		model.addAttribute("val", form.getVal());
 		return "echo";
 	}
