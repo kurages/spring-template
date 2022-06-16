@@ -18,7 +18,7 @@ public class EchoController {
 		return form;
 	}
 
-	@RequestMapping(value="/echo" method = RequestMethod.POST)
+	@RequestMapping(value="/echo", method = RequestMethod.POST)
 	public String echo(EchoModel form, Model model) {
 		model.addAttribute("val", form.getVal());
 		return "echo";
