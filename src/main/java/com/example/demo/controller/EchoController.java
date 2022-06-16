@@ -10,7 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import com.example.demo.model.EchoModel;
 
 @Controller
-@RequestMapping("/echo")
 public class EchoController {
 	
 	@ModelAttribute
@@ -19,7 +18,7 @@ public class EchoController {
 		return form;
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(value="/echo" method = RequestMethod.POST)
 	public String echo(EchoModel form, Model model) {
 		model.addAttribute("val", form.getVal());
 		return "echo";
