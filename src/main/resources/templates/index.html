@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
 	<meta charset="UTF-8">
 	<title>Spring Boot Sample</title>
@@ -7,6 +6,8 @@
 
 <body>
 	<p>Gradle Spring Boot Hello World</p>
+	<from th:actions="@{/echo}" th:field="${form}">
+		<input type="text" />
+	</form>
 </body>
-
 </html>
