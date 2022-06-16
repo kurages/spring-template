@@ -19,11 +19,6 @@ public class EchoController {
 		return form;
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String index(Model model) {
-		return "index";
-	}
-
 	@RequestMapping(method = RequestMethod.POST)
 	public String echo(EchoModel form, Model model) {
 		model.addAttribute("val", form.getVal());
